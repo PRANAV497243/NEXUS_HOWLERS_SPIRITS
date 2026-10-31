@@ -1,0 +1,58 @@
+{
+  "system": {
+    "project_name": "PROJECT NEXUS",
+    "version": "1.0.0",
+    "author": "Developed by Pranav, AI & DE Branch"
+  },
+  "providers": {
+    "groq": {
+      "priority": 1,
+      "models": {
+        "fast": "llama-3.1-8b-instant",
+        "strong": "llama-3.3-70b-versatile"
+      },
+      "max_retries": 3,
+      "backoff_base": 2.0
+    },
+    "gemini": {
+      "priority": 2,
+      "models": {
+        "fast": "gemini-1.5-flash",
+        "strong": "gemini-1.5-pro"
+      },
+      "max_retries": 3,
+      "backoff_base": 2.0
+    },
+    "openai": {
+      "priority": 3,
+      "models": {
+        "fast": "gpt-4o-mini",
+        "strong": "gpt-4o"
+      },
+      "max_retries": 2,
+      "backoff_base": 2.0
+    }
+  },
+  "agent_allocations": {
+    "planner": {
+      "tier": "strong",
+      "preferred_provider": "groq"
+    },
+    "researcher": {
+      "tier": "fast",
+      "preferred_provider": "groq"
+    },
+    "analyst": {
+      "tier": "strong",
+      "preferred_provider": "groq"
+    },
+    "critic": {
+      "tier": "strong",
+      "preferred_provider": "gemini"
+    },
+    "writer": {
+      "tier": "strong",
+      "preferred_provider": "groq"
+    }
+  }
+}

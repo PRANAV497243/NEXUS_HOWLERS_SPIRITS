@@ -1,0 +1,38 @@
+# PROJECT NEXUS
+# Developed by Pranav, AI & DE Branch
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+.venv
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data & Persistence (keep folder structure, not contents)
+data/chroma_db/
+data/charts/*.png
+data/reports/*.docx
+!data/charts/.gitkeep
+!data/reports/.gitkeep
+_staging/
+.cache
+.pytest_cache/
+*.log

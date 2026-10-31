@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROJECT NEXUS — Autonomous Multi-Agent AI Problem Solver</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Header -->
+    <header class="top-nav">
+      <div class="brand">
+        <div class="logo-orb">⚡</div>
+        <div>
+          <h1>PROJECT NEXUS</h1>
+          <p class="subtitle">Autonomous Multi-Agent AI Problem Solver</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="badge-status" id="system-status"><span class="dot"></span> System Ready</div>
+        <button id="voice-btn" class="icon-btn" title="Toggle Voice Recognition">🎙️ Voice</button>
+      </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <!-- Input Panel -->
+      <section class="card input-card">
+        <h2>Submit Complex Objective</h2>
+        <div class="input-container">
+          <textarea id="query-input" placeholder="Enter instructions, research question, or problem to solve autonomously..." rows="3"></textarea>
+          <div class="action-bar">
+            <label class="toggle-control">
+              <input type="checkbox" id="auto-approve-toggle" checked>
+              <span>Auto-Approve Plan Checkpoint</span>
+            </label>
+            <button id="solve-btn" class="primary-btn">
+              <span>Execute Multi-Agent Workflow</span>
+              <span class="btn-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Agent Flow Visualizer -->
+      <section class="card flow-card">
+        <h2>Autonomous Agent Fleet Orchestration</h2>
+        <div class="agents-grid">
+          <div class="agent-node" id="node-planner">
+            <div class="agent-icon">🧠</div>
+            <div class="agent-title">Supervisor / Planner</div>
+            <div class="agent-status" id="status-planner">Idle</div>
+          </div>
+          <div class="agent-arrow">→</div>
+          <div class="agent-node" id="node-researcher">
+            <div class="agent-icon">🔍</div>
+            <div class="agent-title">Web Researcher</div>
+            <div class="agent-status" id="status-researcher">Idle</div>
+          </div>
+          <div class="agent-arrow">→</div>
+          <div class="agent-node" id="node-analyst">
+            <div class="agent-icon">📊</div>
+            <div class="agent-title">Data Analyst</div>
+            <div class="agent-status" id="status-analyst">Idle</div>
+          </div>
+          <div class="agent-arrow">→</div>
+          <div class="agent-node" id="node-critic">
+            <div class="agent-icon">🛡️</div>
+            <div class="agent-title">Critic & Verifier</div>
+            <div class="agent-status" id="status-critic">Idle</div>
+          </div>
+          <div class="agent-arrow">→</div>
+          <div class="agent-node" id="node-writer">
+            <div class="agent-icon">✍️</div>
+            <div class="agent-title">Synthesizer / Writer</div>
+            <div class="agent-status" id="status-writer">Idle</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Live Activity & Results Grid -->
+      <div class="split-view">
+        <!-- Live Agent Stream -->
+        <section class="card stream-card">
+          <div class="card-header">
+            <h3>Live Activity Feed</h3>
+            <span class="badge" id="activity-counter">0 events</span>
+          </div>
+          <div class="stream-log" id="stream-log">
+            <div class="empty-state">No active execution. Enter a problem above to begin.</div>
+          </div>
+        </section>
+
+        <!-- Final Solution Output -->
+        <section class="card result-card">
+          <div class="card-header">
+            <h3>Final Solution Report</h3>
+            <a id="download-docx-btn" class="download-btn hidden" href="#" download>📥 Download .docx</a>
+          </div>
+          <div class="result-body" id="result-body">
+            <div class="empty-state">Generated solution and citations will be rendered here.</div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer with Required Attribution -->
+    <footer class="app-footer">
+      <p>Developed by Pranav, AI & DE Branch</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
